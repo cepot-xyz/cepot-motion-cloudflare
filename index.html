@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cepot Motion adalah desainer motion graphics dan visual storytelling futuristik. Mengubah konsep menjadi narasi visual yang memikat dengan estetika minimalis dan presisi pixel-perfect.">
+    <meta name="keywords" content="Cepot Motion, motion graphics, visual storytelling, desainer futuristik, animasi, After Effects, Cinema 4D, Illustrator, portofolio desain, jasa motion graphic">
+    <title>Cepot Motion | Beranda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e1e1e',
+                        accent: '#ff3333',
+                    },
+                    fontFamily: {
+                        sora: ['Sora', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-primary font-sora text-white min-h-screen">
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Navigation Component -->
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fadeIn">
+                <span class="text-accent">Cepot</span> Motion
+            </h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-10 opacity-90 animate-fadeIn delay-100">
+                Ketika Motion bertemu emotion — merancang cerita visual yang menggerakkan audiens.
+            </p>
+            <div class="flex gap-4 justify-center animate-fadeIn delay-200">
+                <a href="#contact" class="px-8 py-3 bg-accent hover:bg-opacity-90 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-accent/30">
+                    Ayo Kolab!
+                </a>
+                <a href="#pricing" class="px-8 py-3 border border-white border-opacity-20 hover:border-accent hover:text-accent rounded-full font-medium transition-all duration-300">
+                    Jelajahi Jasa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Visi dalam Motion</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="mb-6 opacity-90 leading-relaxed">
+                        Mengkhususkan diri pada motion graphics dan visual storytelling, saya mengubah konsep menjadi narasi menarik yang memikat dan menggaet audiens.
+                    </p>
+                    <p class="mb-6 opacity-90 leading-relaxed">
+                        Dengan estetika minimalis dan pendekatan futuristik, setiap proyek dibuat dengan presisi pixel-perfect dan sentuhan kreatif.
+                    </p>
+                    <div class="flex gap-4">
+                        <span class="px-4 py-2 bg-accent bg-opacity-10 border border-accent border-opacity-30 rounded-full text-sm">After Effects</span>
+                        <span class="px-4 py-2 bg-accent bg-opacity-10 border border-accent border-opacity-30 rounded-full text-sm">Cinema 4D</span>
+                        <span class="px-4 py-2 bg-accent bg-opacity-10 border border-accent border-opacity-30 rounded-full text-sm">Illustrator</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/42" alt="Workstation" class="object-cover w-full h-full">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-accent rounded-full opacity-20 -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 px-6 bg-primary bg-opacity-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Karya Unggulan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-video">
+                    <img src="http://static.photos/abstract/640x360/1" alt="Project 1" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Brand Animation</h3>
+                            <p class="text-sm opacity-80">Motion Graphics</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-video">
+                    <img src="http://static.photos/abstract/640x360/2" alt="Project 2" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Product Reveal</h3>
+                            <p class="text-sm opacity-80">3D Animation</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-video">
+                    <img src="http://static.photos/abstract/640x360/3" alt="Project 3" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">UI Motion</h3>
+                            <p class="text-sm opacity-80">Interaction Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-white border-opacity-20 hover:border-accent hover:text-accent rounded-full font-medium transition-all duration-300">
+                    Lihat Portofolio Lengkap
+                    <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6" id="testimonials">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Suara Klien</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 border border-white border-opacity-10 rounded-lg hover:border-accent hover:border-opacity-30 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/1" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm opacity-70">Marketing Director</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90 italic">"Cepot transformed our brand identity with stunning motion graphics that perfectly captured our vision. The attention to detail was exceptional."</p>
+                </div>
+                <div class="p-8 border border-white border-opacity-10 rounded-lg hover:border-accent hover:border-opacity-30 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/2" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-sm opacity-70">Creative Director</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90 italic">"Working with Cepot was a game-changer for our product launch. The animations were not just visually stunning but strategically effective."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 px-6 bg-primary bg-opacity-50" id="pricing">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Daftar Harga</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-white border-opacity-10 rounded-lg hover:border-accent hover:border-opacity-30 transition-all duration-300 price-card">
+                    <span class="shiny" aria-hidden="true"></span>
+                    <h3 class="text-2xl font-bold mb-4">Paket Dasar</h3>
+                    <p class="text-4xl font-bold mb-6">Rp. 50.000<span class="text-lg font-normal opacity-70">/project</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Simple Animation (8 - 12 detik)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>All Project File Source (hangus dalam 1 bulan)</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="w-full block text-center px-6 py-3 border border-accent text-accent rounded-full font-medium hover:bg-accent hover:bg-opacity-10 transition-all duration-300">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="p-8 border border-accent border-opacity-30 rounded-lg relative price-card">
+                    <span class="shiny" aria-hidden="true"></span>
+                    <!-- <div class="absolute popular-badge px-4 py-1 bg-accent text-xs font-bold rounded-full">TERPOPULER</div> -->
+                    <h3 class="text-2xl font-bold mb-4">Paket Pro</h3>
+                    <p class="text-4xl font-bold mb-6">Rp. 100.000<span class="text-lg font-normal opacity-70">/project</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Animasi kompleks (10 - 30 detik)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Restorasi Asset Original</span>
+                        </li>
+                        <!-- <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Sound Design</span>
+                        </li> -->
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>All Project File Source (hangus dalam 1 bulan)</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="w-full block text-center px-6 py-3 bg-accent hover:bg-opacity-90 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-accent/30">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="p-8 border border-white border-opacity-10 rounded-lg hover:border-accent hover:border-opacity-30 transition-all duration-300 price-card premium-card">
+                    <span class="shiny" aria-hidden="true"></span>
+                    <h3 class="text-2xl font-bold mb-4">Paket Premium</h3>
+                    <p class="text-4xl font-bold mb-6">Rp. 200.000<span class="text-lg font-normal opacity-70">/project</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Full Produksi (1 - 2 menit)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Restorasi Asset Original</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Sound Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>Priority Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-accent"></i>
+                            <span>All Project File Source (hangus dalam 1 bulan)</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="w-full block text-center px-6 py-3 border border-accent text-accent rounded-full font-medium hover:bg-accent hover:bg-opacity-10 transition-all duration-300">
+                        Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6" id="faq">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Pertanyaan Umum</h2>
+            <div class="space-y-4">
+                <div class="border-b border-white border-opacity-10 pb-4">
+                    <button class="flex justify-between items-center w-full text-left group">
+                        <h3 class="text-xl font-medium group-hover:text-accent transition-colors duration-300">Berapa lama biasanya pengerjaan proyek?</h3>
+                        <i data-feather="chevron-down" class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                        <div class="mt-2 opacity-90 hidden group-[.active]:block">
+                        <p>Kebanyakan proyek memakan waktu 2-4 minggu dari brief awal hingga pengiriman akhir. Animasi kompleks atau yang memerlukan aset 3D kustom bisa memakan waktu lebih lama. Saya akan memberikan jadwal terperinci setelah memahami kebutuhan Anda.</p>
+                    </div>
+                </div>
+                <div class="border-b border-white border-opacity-10 pb-4">
+                    <button class="flex justify-between items-center w-full text-left group">
+                        <h3 class="text-xl font-medium group-hover:text-accent transition-colors duration-300">Apa yang diperlukan untuk memulai?</h3>
+                        <i data-feather="chevron-down" class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                        <div class="mt-2 opacity-90 hidden group-[.active]:block">
+                        <p>Saya memerlukan brand guideline Anda (warna, font, logo), aset yang sudah ada, naskah atau storyboard jika ada, dan contoh gaya yang Anda sukai. Semakin banyak informasi yang diberikan sejak awal, semakin mendekati visi Anda draf pertama yang dibuat.</p>
+                    </div>
+                </div>
+                <div class="border-b border-white border-opacity-10 pb-4">
+                    <button class="flex justify-between items-center w-full text-left group">
+                        <h3 class="text-xl font-medium group-hover:text-accent transition-colors duration-300">Apakah Anda menyediakan revisi?</h3>
+                        <i data-feather="chevron-down" class="w-5 h-5 transform group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                        <div class="mt-2 opacity-90 hidden group-[.active]:block">
+                        <p>Ya! Paket Dasar termasuk 2 kali revisi, sedangkan Paket Pro dan Premium mencakup revisi tanpa batas dalam ruang lingkup proyek. Perubahan besar terhadap konsep awal mungkin memerlukan anggaran tambahan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-[#111111]">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap mewujudkan visi Anda?</h2>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto mb-10">Mari ciptakan sesuatu yang luar biasa bersama. Kirim pesan dan mari kita diskusikan proyek Anda.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <custom-footer id="contact"></custom-footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+    <script src="components/mouse-trail.js"></script>
+</body>
+</html>
