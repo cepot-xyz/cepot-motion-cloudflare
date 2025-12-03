@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+/* Keyframes Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gaya Dasar */
+html, * {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 1;
+    background-color: #111111;
+}
+
+main {
+    flex: 1;
+}
+
+/* Kelas Utilitas */
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+/* Kustom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff3333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff5555;
+}
+
+/* Interaksi FAQ */
+.faq-item.active .faq-content {
+    display: block;
+}
+
+/* Efek 'Shiny' untuk kartu harga */
+.price-card {
+    position: relative;
+    /* beri ruang di atas supaya badge populer tidak terpotong oleh padding internal/overflow */
+    padding-top: 3rem; /* override p-8 pada top agar badge muat */
+    overflow: hidden; /* tetap potong konten yang meluber, tapi badge dibuat berada di dalam area */
+    transition: transform 350ms ease; /* animasi scale saat hover */
+    will-change: transform;
+    height: 100%;
+}
+
+
+.price-card .shiny {
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 220%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
+    transform: translateX(-100%) rotate(25deg);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.15; /* baseline subtle shine */
+    filter: blur(60px); /* blur halus pada overlay putih */
+}
+
+@keyframes shiny {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+}
+
+/* Centered badge (popular) yang tidak akan terpotong */
+.price-card .popular-badge {
+    left: 50%;
+    top: 0.6rem;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Hanya aktifkan animasi otomatis di perangkat yang mendukung hover (desktop) dan bila pengguna tidak meminta reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+        .price-card .shiny {
+            animation: shiny 3s linear infinite;
+            opacity: 0.18;
+        }
+
+        /* efek membesar halus saat hover (350ms) */
+        .price-card:hover {
+            transform: scale(1.03);
+        }
+    }
+
+.premium-card {
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    border: 2px solid transparent;
+    border-image: linear-gradient(145deg, #ff3333, #ffd700);
+    border-image-slice: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    border-radius: 0.5rem;
+}
+
+.premium-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 40px rgba(255, 51, 51, 0.3);
+}
+
+/* Jika user memilih reduced motion atau perangkat sentuh, matikan animasi berulang agar tidak mengganggu */
+@media (prefers-reduced-motion: reduce), (hover: none) {
+    .price-card .shiny {
+        animation: none;
+        opacity: 0.12;
+    }
+
+    .price-card:hover {
+        transform: none;
+    }
+}
+
+/* Overlay / modal styles for price overlay component */
+.pricing-overlay .overlay-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 350ms ease;
+    z-index: 9998;
+}
+.pricing-overlay .overlay-backdrop.active {
+    opacity: 1;
+}
+.pricing-overlay .pricing-modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.96);
+    opacity: 0;
+    z-index: 9999;
+    max-width: 1100px;
+    width: calc(100% - 48px);
+    transition: transform 350ms ease, opacity 350ms ease;
+    padding: 1.5rem;
+}
+.pricing-overlay .pricing-modal.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.pricing-overlay .pricing-modal-inner {
+    background: linear-gradient(180deg, rgba(30,30,30,0.9), rgba(20,20,20,0.9));
+    padding: 1rem;
+    border-radius: 12px;
+}
+.pricing-overlay .pricing-close {
+    position: absolute;
+    right: 1rem;
+    top: 0.6rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* Make modal responsive */
+@media (max-width: 768px) {
+    .pricing-overlay .pricing-modal {
+        width: calc(100% - 24px);
+        padding: 0.75rem;
+    }
+    .pricing-overlay .pricing-modal-inner {
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+}
+
+/* Penyesuaian Responsif */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Halaman dengan latar gelap ekstra + kilau (hanya untuk halaman khusus: karya/testimoni/faq) */
+.page-shiny {
+    background-color: #1e1e1e;
+    position: relative;
+    /* biarkan overflow visible agar halaman bisa discroll; pseudo-overlay tidak menangkap pointer (pointer-events:none) */
+    overflow: visible;
+}
+
+/* Pseudo-overlay untuk efek "silau" yang lebih tajam */
+.page-shiny::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.02) 100%), radial-gradient(600px 200px at 10% 20%, rgba(255,80,80,0.04), transparent 30%);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    opacity: 0.9; /* lebih kuat — "silau njir" */
+    filter: blur(14px);
+    animation: aurora 18s linear infinite;
+    z-index: 0;
+}
+
+/* Pastikan isi halaman di atas overlay */
+.page-shiny > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Klik / transisi halus untuk tautan pricelist dan kontak serta tombol order */
+a[href*="#pricing"], a[href*="#contact"], .btn-order {
+    transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, opacity 180ms ease;
+    will-change: transform;
+}
+
+a[href*="#pricing"]:active, a[href*="#contact"]:active, .btn-order:active {
+    transform: scale(0.98);
+    opacity: 0.95;
+}
+
+/* Fokus yang jelas tapi tidak mengganggu */
+a[href*="#pricing"]:focus, a[href*="#contact"]:focus, .btn-order:focus {
+    outline: 2px solid rgba(255,51,51,0.18);
+    outline-offset: 4px;
+}
+
+/* Kurangi intensitas overlay/animasi di perangkat sentuh untuk performa */
+@media (hover: none), (prefers-reduced-motion: reduce) {
+    .page-shiny::before {
+        animation: none;
+        opacity: 0.12;
+        filter: blur(8px);
+    }
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+body {
+    position: relative;
+    z-index: 1;
+    background-color: #111111;
+}
